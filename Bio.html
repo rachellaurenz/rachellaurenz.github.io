@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="portfolio.css">
+    <meta name="Author" content="Rachel Laurenz">
+    <title>Bio</title>
+    <style>
+
+      /*Full computer screen - overlaping*/
+      @media screen and (min-width: 1000px){
+        #me_pic{
+        width: 250px;
+        z-index: -1;
+        position:relative;
+        margin-top: 0;
+        border: solid black 3px;
+      }
+
+      .main{
+        margin:10%;
+      }
+
+      .about{
+        z-index: 1;
+        background-color:rgba(29, 63, 40, 94%);
+        border: 3px solid black;
+        margin-left: 13%;
+        margin-top: -15%;
+        padding: 30px;
+      }
+      }
+      
+      /*half screen-ish - side by side*/
+      @media screen and (max-width: 1000px) and (min-width: 700px){
+        #me_pic{
+        width: 250px;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+
+      .main{
+        margin:10%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .main :first-child{
+        width: 250px
+      }
+
+      .about{
+        background-color:rgba(29, 63, 40, 96%);
+        border: 3px solid black;
+        margin-left: 13%;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+      }
+
+      }
+
+      /*small screen - over and under each other*/
+      @media screen and (max-width: 700px){
+        #me_pic{
+        width: 250px;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .main{
+        margin:10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .about{
+        background-color:rgba(29, 63, 40, 96%);
+        border: 3px solid black;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      }
+
+    </style>
+</head>
+
+<header>
+    <a href="index.html"><h3>Rachel Laurenz</h3></a>
+
+    <!--Drop down menu-->
+    <div class="navbar">
+      <a id="menu" href="Bio.html">Bio</a>
+      <a id='menu' href="resume.html">Resume</a>
+      <a id='menu' href="Contact.html">Contact</a>
+      <div class="dropdown">
+        <button id="menu" class="dropbtn">Gallery</button>
+        <div class="dropdown-content">
+          <a href="GIFS.html">GIFS</a>
+          <a href="SoundScape.html">SoundScape</a>
+          <a href="ExperimntalVideo.html">Experimental Video</a>
+          <a href="VirtuallySpatial.html">Virtually Spatial</a>
+          <a href="ARFaceFilter.html">AR Face Filter</a>
+          <a href="Archive.html">Archive</a>
+          <a href="Materialized.html">Materialized</a>
+        </div>
+      </div>
+      <h2>Bio</h2>
+    </div>
+    </div>
+
+</header>
+<body>
+ <div class="main">   
+  <img id="me_pic" src="pictures/me_water.JPG" alt="Picture of Rachel Laurenz">
+
+  <div class="about">
+    <p>My name is Rachel Laurenz and I am a freshman at Western Michigan University. I am currently an undecided major with a minor in Kinetic Imaging. At the
+      at the moment, the movie industry is one of the career fields I'm looking into. I have a passion for nature, animals, and sustainability. Some of my hobbies 
+      include: playing music, bowling, and escape rooms. I am a part of the Lee Honors College, Alpha Lambda Delta, and a steel drum band at Kalamazoo College.
+  </div>
+ </div>
+
+</body>
+</html>
