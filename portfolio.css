@@ -1,11 +1,8 @@
 html{
   color: #E6E6E6;
-  /*background: linear-gradient(rgba(11, 10, 9, 0.7), rgba(4, 4, 4, 0.7)), url(pictures/__background.JPG);*/
-  background-image: url(pictures/__background.JPG);
-  background-color: rgba(11, 10, 9, 0.7), rgba(4, 4, 4, 0.7);
-  background-blend-mode: overlay;
-
+  background: linear-gradient(rgba(11, 10, 9, 0.7), rgba(4, 4, 4, 0.7)), url(pictures/background.JPG);
 }
+
 
 select{
   background-color:#E6E6E6;
