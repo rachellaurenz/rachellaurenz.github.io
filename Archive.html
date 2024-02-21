@@ -13,35 +13,79 @@
     <meta name="Author" content="Rachel Laurenz">
     <title>Archive</title>
     <style>
-      
-    </style>
-</head>
 
-<header>
-  <a href="index.html"><h3>Rachel Laurenz</h3></a>
-
-  <!--Drop down menu-->
-  <div class="navbar">
-      <a id="menu" href="Bio.html">Bio</a>
-      <a id='menu' href="resume.html">Resume</a>
-      <a id='menu' href="Contact.html">Contact</a>
-      <div class="dropdown">
-        <button id="menu" class="dropbtn">Gallery</button>
-        <div class="dropdown-content">
-          <a href="GIFS.html">GIFS</a>
-          <a href="SoundScape.html">SoundScape</a>
-          <a href="ExperimntalVideo.html">Experimental Video</a>
-          <a href="VirtuallySpatial.html">Virtually Spatial</a>
-          <a href="ARFaceFilter.html">AR Face Filter</a>
-          <a href="Archive.html">Archive</a>
-          <a href="Materialized.html">Materialized</a>
-        </div>
-      </div>
-      <h2>Archive</h2>
-    </div>
-
-</header>
-<body>
+      /*Background*/
+       .container {
+        position: relative;
+      }
   
-</body>
-</html>
+      .background-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden; /* Prevent content from causing image repetition */
+        z-index: 1;
+      }
+  
+      .background-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgba(11, 10, 9, 0.7), rgba(4, 4, 4, 0.7));
+        z-index: 1;
+      }
+  
+      .background-container #img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover; /* Prevent image repetition */
+      }
+  
+      .content-container {
+        position: relative;
+        z-index: 2;
+      }
+      </style>
+  </head>
+  <!--background image-->
+  <div class="background-container">
+    <img id="img" src="pictures/__background.JPG" alt="Background Image">
+  </div>
+  <div class="content-container">
+   
+  <header>
+    <a href="index.html"><h3>Rachel Laurenz</h3></a>
+  
+    <!--Drop down menu-->
+    <div class="navbar">
+        <a id="menu" href="Bio.html">Bio</a>
+        <a id='menu' href="resume.html">Resume</a>
+        <a id='menu' href="Contact.html">Contact</a>
+        <div class="dropdown">
+          <button id="menu" class="dropbtn">Gallery</button>
+          <div class="dropdown-content">
+            <a href="GIFS.html">GIFS</a>
+            <a href="SoundScape.html">SoundScape</a>
+            <a href="ExperimntalVideo.html">Experimental Video</a>
+            <a href="VirtuallySpatial.html">Virtually Spatial</a>
+            <a href="ARFaceFilter.html">AR Face Filter</a>
+            <a href="Archive.html">Archive</a>
+            <a href="Materialized.html">Materialized</a>
+          </div>
+        </div>
+        <h2>Vitually Spatial</h2>
+      </div>
+  
+  </header>
+  <body>
+  
+    
+  </body>
+  </div>
+  </html>
