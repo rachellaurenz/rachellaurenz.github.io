@@ -4,68 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+     <!--fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <!--stylesheet-->
     <link rel="stylesheet" href="portfolio.css">
     <meta name="Author" content="Rachel Laurenz">
     <title>Archive</title>
     <style>
-
-      /*Background*/
-       .container {
-        position: relative;
-      }
-  
-      .background-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden; /* Prevent content from causing image repetition */
-        z-index: 1;
-      }
-  
-      .background-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(rgba(11, 10, 9, 0.7), rgba(4, 4, 4, 0.7));
-        z-index: 1;
-      }
-  
-      .background-container #img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover; /* Prevent image repetition */
-      }
-  
-      .content-container {
-        position: relative;
-        z-index: 2;
-      }
       </style>
   </head>
-  <!--background image-->
-  <div class="background-container">
-    <img id="img" src="pictures/__background.JPG" alt="Background Image">
-  </div>
-  <div class="content-container">
-   
+
   <header>
     <a href="index.html"><h3>Rachel Laurenz</h3></a>
   
     <!--Drop down menu-->
     <div class="navbar">
         <a id="menu" href="Bio.html">Bio</a>
-        <a id='menu' href="resume.html">Resume</a>
+        <!--<a id='menu' href="resume.html">Resume</a>-->
         <a id='menu' href="Contact.html">Contact</a>
         <div class="dropdown">
           <button id="menu" class="dropbtn">Gallery</button>
