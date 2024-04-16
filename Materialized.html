@@ -16,6 +16,55 @@
       p{
         text-align: center;
       }
+     
+      #virtual_box, #hubs_button, #vid{
+        text-align:center;
+      }
+
+      #hubs_button{
+        margin: 38px;
+        font-size: 20px;
+        border-radius: 100px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      }
+
+      /*Slide show*/
+      .slideshow-container {
+        position: relative;
+        text-align:center;
+        max-width:1090px;
+        margin: auto;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .prev,.next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
     </style>
   </head>
   <header>
@@ -44,7 +93,29 @@
   </header>
   <body>
   
-    <p>Coming Soon!</p>
+    <p>Shutter Meltdown</p>
+  <div id="vid">
+    <iframe width="824" height="579" src="https://www.youtube.com/embed/lFOGt20VBug?si=PBjXrD38pAuOvnAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div>
+    
+
+    <p>Some Highlights!</p>
+    
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="pictures/camera1.png" width="1000" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+          <img src="pictures/camera2.png" width="1000" alt="Slide 2">
+        </div>
+        <div class="slide fade">
+          <img src="pictures/camera3.png" width="1000" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <script src="script.js"></script>
     
   </body>
   </div>
