@@ -1,0 +1,152 @@
+/*Main*/
+html{
+    background-color:  #e9e7e3;
+    font-family: 'Patrick Hand', cursive;
+    margin: 9px;
+    border-left:#879a9c double 2vw;
+    border-right:#879a9c double 2vw;
+    color:#907c7b;
+    text-align: center;
+}
+
+body{
+    font-size: 1.5vw;
+}
+
+footer{
+    font-size: small;
+    text-align: center;
+}
+
+.responsive{
+    width:100%;
+    max-width:250em;
+    height:auto;
+}
+
+/*title tags*/
+h1{
+    font-size: 6.7vw;
+    text-shadow: #b39f96 .2vw .2vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h3{
+    font-size: 2.5vw;
+    text-shadow: #b39f96 .1vw .1vw;
+}
+
+h1, h3{
+    font-family: 'Merienda', cursive;
+    color: #879a9c;
+}
+
+h2{
+    margin-top:3px;
+}
+
+h4{
+    font-size: 2vw;
+    text-shadow: .09vw .09vw #879a9c;
+    text-decoration: underline #879a9c;
+}
+
+/*Classes and ids*/
+#logo{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#videos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: none;
+    margin: 3vw;
+}
+
+#quotes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:#879a9c solid 3px;
+    margin: 3vw;
+}
+
+.arrow{
+    display:flex;
+    justify-content: space-between;
+    margin: 0 4% 0 4%;
+}
+
+.arrowwords{
+    font-size: 18px;
+}
+
+.vidwords{
+    margin: 0 10% 0 10%;
+}
+
+/*
+#Robert, #Steve, #William, #Kahlil, #Selye, #Anne, #Sydney{
+    border:#879a9c solid 4px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+*/
+
+/*Table*/
+tr, td, th{
+    border: 3px solid #879a9c;
+    padding: .6vw;
+}
+
+table{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 3m 0 3em 0;
+}
+
+
+/*Links*/
+a:hover, a:active{
+    color:#b3a697;
+    text-decoration: dotted;
+}
+
+a{ 
+    color:#907c7b;;
+    text-align: center;
+    text-decoration: none;
+ }
+
+@media screen and (max-width: 1000px){
+    body{
+        font-size:3vw;
+    }
+    h1{
+        font-size: 9vw;
+        text-shadow: #b39f96 .4vw .4vw;
+    }
+
+    h3{
+        font-size: 4vw;
+        text-shadow: #b39f96 .2vw .2vw;
+    }
+    h4{
+        font-size: 3.5vw;
+    }
+    video{
+        height: 200px;
+    }
+    .arrow1{
+        width: 12xp;
+    }
+    .arrow2{
+        width: 14px
+    }
+}
