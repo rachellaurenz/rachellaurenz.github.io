@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="portfolio.css">
+    <meta name="Author" content="Rachel Laurenz">
+    <title>Photography</title>
+    <style>
+      img{
+        width: 400px;
+        margin-bottom: 20px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 15px;
+      }
+
+    .gallery__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+
+
+
+
+
+
+
+
+    .gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </style>
+  </head>
+  <header>
+    <a href="index.html"><h3>Rachel Laurenz</h3></a>
+  
+    <!--Drop down menu-->
+    <div class="navbar">
+        <a id="menu" href="Bio.html">Bio</a>
+        <!--<a id='menu' href="resume.html">Resume</a>-->
+        <a id='menu' href="Contact.html">Contact</a>
+        <div class="dropdown">
+          <button id="menu" class="dropbtn">Gallery</button>
+          <div class="dropdown-content">
+            <a href="GIFS.html">GIFS</a>
+            <a href="SoundScape.html">SoundScape</a>
+            <a href="ExperimntalVideo.html">Experimental Video</a>
+            <a href="VirtuallySpatial.html">Virtually Spatial</a>
+            <a href="ARFaceFilter.html">AR Face Filter</a>
+            <a href="Archive.html">Archive</a>
+            <a href="Materialized.html">Materialized</a>
+          </div>
+        </div>
+        <h2>Photography</h2>
+      </div>
+  
+  </header>
+  <body>
+
+  
+    <!--<img src="pictures/photo_page/_DSC0028.jpg">
+    <img src="pictures/photo_page/_DSC0031.jpg">
+    <img src="pictures/photo_page/Ann2.jpg">
+    <img src="pictures/photo_page/_DSC0204.jpg">
+    <img src="pictures/photo_page/Anna1.jpg">
+    <img src="pictures/photo_page/IMG_0954.jpg">
+    <img src="pictures/photo_page/IMG_1397.jpg">
+    <img src="pictures/photo_page/IMG_7784.jpg">
+    <img src="pictures/photo_page/IMG_8027.jpg">
+    <img src="pictures/photo_page/leaves.jpg">
+    <img src="pictures/photo_page/IMG_8103.jpg">-->
+        
+
+    
+
+
+
+
+    <div class="gallery">
+
+
+
+      <div class=”gallery”>
+        <figure class=”gallery__item gallery__item--1">
+          <img src="pictures/photo_page/Anna1.jpg" class="gallery__img" alt="Image 1">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="pictures/photo_page/compass.jpg" class="gallery__img" alt="Image 2">
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="pictures/photo_page/red_flower.JPG" class="gallery__img" alt="Image 3">
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="pictures/photo_page/water_ski_zoom.JPG" class="gallery__img" alt="Image 4">
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="pictures/photo_page/Anna2.jpg" class="gallery__img" alt="Image 5">
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="pictures/photo_page/leaves.jpg" class="gallery__img" alt="Image 6">
+        </figure>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </body>
+  </div>
+  </html>
