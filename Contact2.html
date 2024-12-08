@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <!--fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="portfolio.css">
+    <meta name="Author" content="Rachel Laurenz">
+    <title>Rachel Laurenz</title>
+    <style>
+        /* Reset body and html margins and padding to eliminate gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensures padding and border don't create overflow */
+        }
+    
+        html, body {
+            height: 100%; /* Ensure they fill the full viewport height */
+        }
+    
+        /* Header styling */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 250px;
+            width: 100vw; /* Full viewport width */
+        }
+    
+        /* Banner styling */
+        .banner {
+            border-bottom: #000 10px solid;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw; /* Make the banner stretch across the entire page */
+            height: 100%; /* Ensure the banner covers the header height */
+            background-image: url("me/IMG_9500edit2.JPG");
+            background-size: 150%; /* Zoom in on the image */
+            background-position: 100% 15%; /* Adjust image positioning */
+            opacity: 0.7;
+            z-index: -1;
+        }
+    
+        /* Title styling */
+        h1 {
+            font-size: 48px;
+            color: white;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .links{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: none;
+            margin: 1vw;
+        }
+
+        #bio{
+            font-size: 20px;
+            margin-left: 15%;
+            margin-right: 15%;
+        }        
+
+    </style>
+    
+</head>
+
+<header>
+    <h1>Rachel Laurenz</h1>
+    <div class="banner"></div>
+</header>
+<body>
+    <!-- Sample HTML Form -->
+    <form action="Rachel24laurenz@gmail.com"
+    method="POST"
+    enctype="multipart/form-data"
+    name="EmailForm">
+        Name:<br>
+        <input type="text" size="19" name="Contact-Name"><br><br>
+        Email:<br>
+        <input type="email" name="Contact-Email"><br><br> 
+        Message:<br> 
+        <textarea name="Contact-Message" rows="6″ cols="20″>
+        </textarea><br><br> 
+        <button type="submit" value="Submit">Send</button>
+    </form> 
+</body>
+
+</html>
