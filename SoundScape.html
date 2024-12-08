@@ -37,6 +37,182 @@
         margin: 50px;
       }
 
+      
+      /*background*/
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      
+    .card-container {
+        display: flex; /* Use Flexbox */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 20px; /* Add spacing between cards */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        padding: 20px;
+    }
+
+    .video-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.5);
+        }
+      
+        .video-card img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+      p{
+        font-size: 20px;
+        color:#2b4d32;
+      }
+
+      /*buttons and popup for videos*/
+    /* Basic styles */
+    .container {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .trigger {
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .trigger:hover {
+        
+    }
+
+    /* Popup styles */
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none; /* Hidden by default */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Ensure it appears on top */
+    }
+
+    .popup:target {
+        display: flex; /* Show on target */
+    }
+
+    /* Popup content */
+    .popup-content {
+    position: relative;
+    z-index: 2; /* Ensure it's above the overlay */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1000px;
+    max-width: 90%; /* Ensure responsiveness on smaller screens */
+    max-height: 80%; /* Limit height for scrollable content */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+
+    /* Transparent background clickable area */
+    .popup-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 1; /* Sits behind content */
+    }
+
+
+    .popup-content video {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+ 
+
+    .video-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /*slideshow controls*/
+    #virtual_box, #hubs_button, #vid{
+        text-align:center;
+      }
+
+      #hubs_button{
+        margin: 38px;
+        font-size: 20px;
+        border-radius: 100px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      }
+
+      /*Slide show*/
+      .slideshow-container {
+        position: relative;
+        text-align:center;
+        max-width:1090px;
+        margin: auto;
+        padding-bottom: 40px;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .prev,.next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
+
+
+
     </style>
 </head>
 
@@ -56,23 +232,74 @@
   </header>
 
 <body>
-  <div class="sound"><audio controls><source src="audio/Audio_for_Website.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio></div>
+  <div class="card-container">
 
-  <nobr>
-  <img id="me_pic" src="pictures/download-1.png" alt="colorful wavey lines image 1" width="450px">
-  <img id="me_pic" src="pictures/WavesOfColor.png" alt="colorful wavey lines image 2" width="450px">
-  <img id="me_pic" src="pictures/download.png" alt="colorful wavey lines image 3" width="450px">
-  </nobr>
 
-  <p>
-    <u>Audios used:</u><br>
-    Crump_Tavion_FrogCroakToy<br>
-    Virginia_abbott_kick drum<br>
-    Rachel_Laurenz_rubber-chicken<br>
-    Rachel_Laurenz_figet<br>
-    Rachel_Laurenz_beads-on-computer<br>
-    Courtney_Piesko_hazy_violin<br>
-  </p>
+<!--add more here-->
 
-</body>
+
+    <!--SOUNDS WITHOUT CHICXULUB-->
+          <div class="container">
+            <!-- Button for first video -->
+            <div class="video-card">
+                <a href="#video-popup-1">
+                  <div class="card-content">
+                    <img src="pictures/download-1.png" alt="Shutter Meltdown Uncloaking Thumbnail">
+                    <h3>Sounds Without Chicxulub</h3>
+                <p>What would it sound like if the asteroid that killed the dinosours never hit Earth?</p>
+                  </div>
+                </a>
+              </div>
+            <!-- Popup for first video -->
+            <div id="video-popup-1" class="popup">
+              <a href="#" class="popup-overlay"></a> <!-- Transparent background clickable -->
+              <div class="popup-content">
+                <div id="iframe">
+                  <div class="sound"><audio controls><source src="audio/SoundsWithoutChicxulub.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio></div>
+                </div>
+                <p>Sounds Without Chicxulub</p>
+            <p>
+              I created this to simulate what Earth would sound like if the Chicxulub asteroid never hit Earth. I read an article that said birds probably would not have evolved to sing, which intrigued me into making this. I started with water, fire, and wind to show that those won't change. Then I added a few other sounds I recorded in the woods my dad owns. 
+            </p>
+              </div>
+            </div>
+          </div>
+          
+    
+    <!--SOUNDSCAPE-->
+          <div class="container">
+            <!-- Button for second video -->
+            <div class="video-card">
+                <a href="#video-popup-2">
+                  <div class="card-content">
+                    <img src="pictures/WavesOfColor.png" alt="Visually Uncloaking Thumbnail">
+                    <h3>SoundScape</h3>
+                    <p>This was the first time I worked with sound.</p>
+                  </div>
+                </a>
+              </div>
+            <div id="video-popup-2" class="popup">
+              <a href="#" class="popup-overlay"></a> 
+              <div class="popup-content">
+                <div id="iframe">
+                  <div class="sound"><audio controls><source src="audio/Audio_for_Website.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio></div>
+                </div>
+                <p>SoundScape</p>
+                <p>
+                  <u>Audios used:</u><br>
+                  Crump_Tavion_FrogCroakToy<br>
+                  Virginia_abbott_kick drum<br>
+                  Rachel_Laurenz_rubber-chicken<br>
+                  Rachel_Laurenz_figet<br>
+                  Rachel_Laurenz_beads-on-computer<br>
+                  Courtney_Piesko_hazy_violin<br>
+                </p>
+              </div>
+            </div>
+          </div>
+           
+    
+    </div>
+    </body>
+    </div>
 </html>
