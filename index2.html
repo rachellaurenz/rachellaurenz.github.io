@@ -16,26 +16,115 @@
     <meta name="Author" content="Rachel Laurenz">
     <title>Rachel Laurenz</title>
     <style>
-        h1{
+        /* Reset body and html margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+    
+        /* Header styling */
+        header {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            background-color: black;
+            position: relative;
+            height: 400px; /* Increased banner size */
+            width: 100vw;
+            z-index: 1;
+        }
+    
+        /* Banner styling */
+        .banner {
+            border-bottom: #000 10px solid;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100%; /* Covers the entire header */
+            background-image: url("me/IMG_9500edit3.JPG");
+            background-size: 150%;
+            background-position: 100% 15%;
+            opacity: 0.7;
+            z-index: -1;
+        }
+    
+        /* Title styling */
+        h1 {
+            font-size: 48px;
+            color: white;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
         }
 
-        .picture_of_me{
-            size: 4px;
+        h3{
+            margin-top: 5em;
         }
+
+        /* Links styling */
+        .links {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -75px; /* Position the links half out of the banner */
+            width: 100vw;
+        }
+        
+        .links a {
+            display: block;
+            text-align: center;
+            width: 150px; /* Fixed width for alignment */
+        }
+
+        .links a img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 100%;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .links a img:hover {
+            
+        }
+
+        #bio{
+            font-size: 20px;
+            margin-left: 15%;
+            margin-right: 15%;
+        }     
 
     </style>
 </head>
 
-<header>
-    <h1>Rachel Laurenz</h1>
-
-    <div id="picture_of_me"><img id="me_pic" src="pictures/me_water.JPG" alt="Picture of Rachel Laurenz"></div>
-
-</header>
-
 <body>
+    <header>
+        <h1>Rachel Laurenz</h1>
+        <div class="banner"></div>
+        <div class="links">
+            <a href="index.html"><img src="me/reflection2.JPG" alt="Art Portfolio"><br>Art Portfolio</a>
+            <a href="resume.html"><img src="pictures/wmu_PLEASE.jpg" alt="Resume"><br>Resume</a>
+            <a href="Contact.html"><img src="pictures/paint_lines_1.jpg" alt="Contact"><br>Contact</a>
+        </div>
+    </header>
 
+    <h3>Introduction</h3>
+    <p id="bio">My name is Rachel Laurenz and I am a sophomore at Western Michigan University. I am currently an undecided major with a minor in Kinetic Imaging. I have a passion for nature, animals, and sustainability. Some of my hobbies include: hiking, playing music, bowling, and escape rooms.
+
+    </p>
 </body>
+</html>

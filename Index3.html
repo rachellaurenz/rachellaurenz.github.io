@@ -79,7 +79,7 @@
         /* Title styling */
         h1 {
             color: #B3C1D8;
-            text-shadow: 2px 1px 0px rgb(115, 119, 71, .8);
+            text-shadow: 2px 2px 0px rgb(115, 119, 71, .8);
             margin: 0;
             font-size: 38px;
         }
@@ -140,91 +140,78 @@
         }
 
         /*Hexagon link styling*/
+
         .Hexlinks {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 6%;
-    margin-bottom: 4%;
-    gap: 30px;
-    overflow: hidden;
-    text-align: center;
-}
-.Hexlinks {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 6%;
-    margin-bottom: 4%;
-    gap: 30px;
-    overflow: hidden;
-    text-align: center;
-}
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin: 6%;
+            margin-bottom: 4%;
+            gap: 30px;
+            overflow:hidden;
+            text-align: center;
+        }
 
-.Hexlinks a {
-    position: relative;
-    display: inline-block;
-    overflow: hidden; /* Ensure nothing spills outside the hexagon */
-    width: 300px;
-    height: 300px;
-    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); /* Hexagonal shape */
-    text-align: center; /* Center the text */
-}
+        .Hexlinks a {
+            position: relative;
+            display: inline-block;
+            overflow: hidden; /* Ensure nothing spills outside the hexagon */
+            width: 300px;
+            height: 300px;
+            clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); /* Hexagonal shape */
+            text-align: center; /* Center the text */
+        }
 
-.Hexlinks a::before {
-    content: '';
-    position: absolute;
-    bottom: -100%; /* Start completely below the hexagon */
-    width: 100%;
-    height: 100%;
-    background-color: #96915F;
-    z-index: 2;
-    transition: bottom 0.4s ease; /* Animate the 'bottom' property smoothly */
-}
+        .Hexlinks a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%; /* Start off-screen to the left */
+            width: 100%;
+            height: 100%;
+            background-color: #96915F;
+            z-index: 2;
+            transition: left 0.4s ease; /* Slide in from the left */
+        }
 
-.Hexlinks a:hover::before {
-    bottom: 0; /* Slide the green background fully into view */
-}
+        .Hexlinks a:hover::before {
+            left: 0; /* Slide in fully on hover */
+        }
 
-.Hexlinks a img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease;
-}
+        .Hexlinks a img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
 
-.Hexlinks a img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
+        .Hexlinks a img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
 
-/* Text styling and animation */
-.Hexlinks a span {
-    position: absolute;
-    bottom: 10%; /* Start near the bottom */
-    left: 50%;
-    transform: translate(-50%, 0); /* Center horizontally, stay at bottom vertically */
-    color: white;
-    font-size: 24px;
-    font-family: 'Salsa', cursive;
-    background-color: rgba(11, 10, 9, 0.5);
-    padding-left:150px;
-    padding-right:150px;
-    padding-bottom:10px;
-    padding-top:10px;
-    z-index: 3; /* Above the green background */
-    white-space: nowrap;
-    transition: transform 0.4s ease, bottom 0.4s ease, opacity 0.4s ease; /* Smooth animation */
-    opacity: 1; /* Visible by default */
-}
+        /* Text styling and animation */
+        .Hexlinks a span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateX(-100%); /* Start off-screen */
+            color: white;
+            font-size: 24px;
+            font-family: 'Salsa', cursive;
+            z-index: 3; /* Above the blue background */
+            white-space: nowrap;
+            transition: transform 0.4s ease; /* Animate the text sliding in */
+            opacity: 0; /* Initially hidden */
+        }
 
-.Hexlinks a:hover span {
-    bottom: 50%; /* Move to the vertical center */
-    transform: translate(-50%, 50%); /* Center vertically and adjust offset */
-}
+        .Hexlinks a:hover span {
+            transform: translate(-50%, -50%) translateX(0); /* Slide the text into view */
+            opacity: 1; /* Make the text visible */
+        }
+
 
 
     </style>
@@ -238,40 +225,20 @@
         </div>
         <div class="banner"></div>
         <div class="Circlelinks">
-            <a href="Bio.html"><img src="me/reflection2.JPG" alt=""><br>Bio</a>
-            <a href="Relax.html"><img src="background/relax_logo.jpg" alt=""><br>Relax</a>
-            <a href="resume.html"><img src="background/wmu_PLEASE2.jpg" alt=""><br>Resume</a>
+            <a href="Contact.html"><img src="me/reflection2.JPG" alt=""><br>Contact</a>
+            <a href="Relax.html"><img src="pictures/wmu_PLEASE.jpg" alt=""><br>Relax</a>
+            <a href="resume.html"><img src="pictures/paint_lines_1.jpg" alt=""><br>Resume</a>
         </div>
     </header>
 
     <div class="Hexlinks">
         <a href="Videos_Portfolio.html">
-            <img src="photo_page/yellow_flower.JPG" alt="">
+            <img src="background/six.jpg" alt="">
             <span>Videos</span> <!-- Add a span element for the text -->
         </a>
         <a href="GIFS.html">
             <img src="background/deck.jpg" alt="">
             <span>GIF</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="VirtuallySpatial.html">
-            <img src="photo_page/ski.JPG" alt="">
-            <span>VR</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="Archive.html">
-            <img src="background/art_book_cover.jpg" alt="">
-            <span>Art book</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="SoundScape.html">
-            <img src="background/sound_wave_maybe.png" alt="">
-            <span>Soundscapes</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="ARFaceFilter.html">
-            <img src="photo_page/Anna1.jpg" alt="">
-            <span>Face Filter</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="Ideas_HW.html">
-            <img src="Idea_hw/Poem1.HEIC" alt="">
-            <span>Art5000 HW</span> <!-- Add a span element for the text -->
         </a>
         <!--<a href="Photography.html">
             <img src="pictures/photo_page/Anna1.jpg" alt="">
@@ -281,9 +248,28 @@
             <img src="background/panflute.JPG" alt="">
             <span>band</span> 
         </a>-->
+        <a href="VirtuallySpatial.html">
+            <img src="pictures/photo_page/ski.JPG" alt="">
+            <span>VR</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="Archive.html">
+            <img src="background/books.jpg" alt="">
+            <span>Art book</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="SoundScape.html">
+            <img src="background/sound_wave_maybe.png" alt="">
+            <span>Soundscapes</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="ARFaceFilter.html">
+            <img src="pictures/photo_page/mythical_flower.PNG" alt="">
+            <span>Face Filter</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="Ideas_HW.html">
+            <img src="pictures/photo_page/snake.jpg" alt="">
+            <span>Art5000 HW</span> <!-- Add a span element for the text -->
+        </a>
     </div>
     
-
 
 </body>
 </html>
