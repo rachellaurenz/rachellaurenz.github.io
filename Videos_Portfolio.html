@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">    
+   <!--stylesheet-->
+    <link rel="stylesheet" href="portfolio.css">
+    <meta name="Author" content="Rachel Laurenz">
+    <title>Videos</title>
+    <style>
+
+      /*background*/
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      
+    .card-container {
+        display: flex; /* Use Flexbox */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 20px; /* Add spacing between cards */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        padding: 20px;
+    }
+
+    .video-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.5);
+        }
+      
+        .video-card img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+      p{
+        font-size: 20px;
+        color:#2b4d32;
+      }
+
+      /*buttons and popup for videos*/
+    /* Basic styles */
+    .container {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .trigger {
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .trigger:hover {
+        
+    }
+
+    /* Popup styles */
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none; /* Hidden by default */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Ensure it appears on top */
+    }
+
+    .popup:target {
+        display: flex; /* Show on target */
+    }
+
+    /* Popup content */
+    .popup-content {
+    position: relative;
+    z-index: 2; /* Ensure it's above the overlay */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1000px;
+    max-width: 90%; /* Ensure responsiveness on smaller screens */
+    max-height: 80%; /* Limit height for scrollable content */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+
+    /* Transparent background clickable area */
+    .popup-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 1; /* Sits behind content */
+    }
+
+
+    .popup-content video {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+ 
+
+    .video-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /*slideshow controls*/
+    #virtual_box, #hubs_button, #vid{
+        text-align:center;
+      }
+
+      #hubs_button{
+        margin: 38px;
+        font-size: 20px;
+        border-radius: 100px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      }
+
+      /*Slide show*/
+      .slideshow-container {
+        position: relative;
+        text-align:center;
+        max-width:1090px;
+        margin: auto;
+        padding-bottom: 40px;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .prev,.next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
+
+
+
+
+    </style>
+</head>
+<header>
+  <div id="transparent"></div>
+
+     <h2>Videos</h2>
+     <div class="menu">
+        <a class="menu_link" href="index.html">Portfolio</a>
+        <a class="menu_link" href="GIFS.html">GIFS</a>
+        <a class="menu_link" href="SoundScape.html">SoundScapes</a>
+        <a class="menu_link" href="Videos_Portfolio.html">Videos</a>
+        <a class="menu_link" href="ARFaceFilter.html">AR Face Filter</a>
+        <a class="menu_link" href="Archive.html">Archive</a>
+        <a class="menu_link" href="VirtuallySpatial.html">Virtual Reality</a>
+       </div>
+  </header>
+<body>
+
+
+<div class="card-container">
+<!--VIDEO VISUALLY UNCLOAKING-->
+<div class="container">
+    <!-- Button for second video -->
+    <div class="video-card">
+        <a href="#video-popup-3">
+          <div class="card-content">
+            <img src="pictures/Video_button_3.jpg" alt="Visually Uncloaking Thumbnail">
+            <h3>Visually Uncloaking</h3>
+            <p>A project focused on magnifying the small details around us.</p>
+          </div>
+        </a>
+      </div>
+    <!-- Popup for second video -->
+    <div id="video-popup-3" class="popup">
+      <a href="#" class="popup-overlay"></a> <!-- Transparent background clickable -->
+        <div class="popup-content">
+        <div id="iframe">
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/S2_n_tdRCoQ?si=vUYiMrV0kH8kX-77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+        </div>
+        <p>Visually Uncloaking</p>
+        <p>This was an assignment to make small things you might not see or notice and making them bigger. The class took _____ camera to the ______ park to get the footage.</p>
+    </div>
+    </div>
+</div>
+
+
+<!--VIDEO SHUTTER MELTDOWN-->
+      <div class="container">
+        <!-- Button for first video -->
+        <div class="video-card">
+            <a href="#video-popup-1">
+              <div class="card-content">
+                <img src="pictures/camera_link_picture.jpg" alt="Shutter Meltdown Uncloaking Thumbnail">
+                <h3>Shutter Meltdown</h3>
+                <p>Flash warning</p>
+              </div>
+            </a>
+          </div>
+        <!-- Popup for first video -->
+        <div id="video-popup-1" class="popup">
+          <a href="#" class="popup-overlay"></a> <!-- Transparent background clickable -->
+          <div class="popup-content">
+            <div id="iframe">
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/lFOGt20VBug?si=PBjXrD38pAuOvnAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Shutter Meltdown</p>
+            <p>This was a final for a class I took freshman year of college. I took a picture of a camera and made it into a GIF using Adobe Photoshop then I turned that into a video using Adobe Primere</p>
+        
+        <div class="slideshow-container">
+            <div class="slide fade">
+              <img src="pictures/watchers.png" width="500" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+              <img src="pictures/exibition.png" width="500" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+              <img src="pictures/camera_only_in_exibition.png" width="500" alt="Slide 3">
+            </div>
+            <div class="slide fade">
+              <img src="pictures/camera1.png" width="500" alt="Slide 4">
+            </div>
+            <div class="slide fade">
+              <img src="pictures/camera2.png" width="500" alt="Slide 5">
+            </div>
+            <div class="slide fade">
+              <img src="pictures/camera3.png" width="500" lt="Slide 6">
+            </div>
+            <!-- Add more slides as needed -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        
+          <script src="script.js"></script>
+               
+          </div>
+        </div>
+      </div>
+      
+
+<!--VIDEO COLOR IS CHAOS-->
+      <div class="container">
+        <!-- Button for second video -->
+        <div class="video-card">
+            <a href="#video-popup-2">
+              <div class="card-content">
+                <img src="pictures/Color_link_picture.jpg" alt="Visually Uncloaking Thumbnail">
+                <h3>Color is Chaos</h3>
+                <p>Colorful Chaos</p>
+              </div>
+            </a>
+          </div>
+        <div id="video-popup-2" class="popup">
+          <a href="#" class="popup-overlay"></a> 
+          <div class="popup-content">
+            <div id="iframe">
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/2H5P_akOT6M?si=anSD5hsAsfc-9qfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Color is Chaos</p>
+            <p>This was my first experience with the _____ programs. This was an assignment freshman year of college and the audio was from another project where I used Audactiy for the first time.</p>
+
+          </div>
+        </div>
+      </div>
+       
+
+</div>
+</body>
+</div>
+</html>
