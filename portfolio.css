@@ -19,6 +19,9 @@ select{
   text-shadow: 5px 5px 5px #533, 20em 0 2em #533, 0 0 0.2em #533;
 }*/
 
+.p{
+  color: #e6e6e6;
+}
 
 .menu_link{
   --b: 3px;   /* border thickness */
