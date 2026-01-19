@@ -58,10 +58,12 @@
             right: 0;
             bottom: 0;
             width: 100vw;
-            height: 100%; /* Covers the entire header */
+            height: 100%; /* Covers the entire header 
             background-image: url("background/Flower2edit.jpg");
             background-size: 125%;
-            background-position: 70% 25%;
+            background-position: 70% 25%;*/
+            object-fit: cover;
+            object-position: top center;
             opacity: 1;
             z-index: -1;
         }
@@ -242,6 +244,12 @@
             <div id="portfolio">Portfolio</div>
         </div>
         <div class="banner"></div>
+        <video class="banner" autoplay loop muted playsinline>
+            <source src="videos/grasswater.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        
         <div class="Circlelinks">
             <a href="Bio.html"><img src="me/reflection2.JPG" alt=""><br>Bio</a>
             <a href="Relax.html"><img src="Link_pictures/relax_logo.jpg" alt=""><br>Relax</a>
@@ -250,9 +258,17 @@
     </header>
 
     <div class="Hexlinks">
-        <a href="Videos_Portfolio.html">
+        <a href="VideoWorks.html">
+            <img src="VideoWorks_pics/Video_cover.png" alt="">
+            <span>Video Works</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="Glitch_Art.html">
+            <img src="GlitchArt_pics/image3.png" alt="">
+            <span>Glitch Art</span> <!-- Add a span element for the text -->
+        </a>
+        <a href="Abstract_videos.html">
             <img src="pictures/camera2.png" alt="">
-            <span>Videos</span> <!-- Add a span element for the text -->
+            <span>Abstract Videos</span> <!-- Add a span element for the text -->
         </a>
         <a href="GIFS.html">
             <img src="Link_pictures/gif_link.jpg" alt="">
@@ -262,24 +278,23 @@
             <img src="Link_pictures/sound_wave_maybe.png" alt="">
             <span>Soundscapes</span> <!-- Add a span element for the text -->
         </a>
-        
-        <a href="Exhibition.html">
+        <a href="3Dspaces.html">
+            <img src="pictures/out_most.jpg" alt="">
+            <span>3D Spaces</span> <!-- Add a span element for the text -->
+        </a>       
+        <a href="Archive.html">
+            <img src="Link_pictures/art_book_cover.jpg" alt="">
+            <span>Books</span> <!-- Add a span element for the text -->
+        </a>
+         <a href="Exhibition.html">
             <img src="serotiny_pics/IMG_3808.jpg" alt="">
             <span>Exhibitions</span> <!-- Add a span element for the text -->
         </a>
-        <a href="Archive.html">
-            <img src="Link_pictures/art_book_cover.jpg" alt="">
-            <span>Art book</span> <!-- Add a span element for the text -->
-        </a>
-        <a href="ARFaceFilter.html">
+        <!--<a href="ARFaceFilter.html">
             <img src="photo_page/Anna1.jpg" alt="">
-            <span>Face Filter</span> <!-- Add a span element for the text -->
+            <span>Face Filter</span>
         </a>
-        <a href="VirtuallySpatial.html">
-            <img src="pictures/out_most.jpg" alt="">
-            <span>VR</span> <!-- Add a span element for the text -->
-        </a>
-        <!--<a href="Photography.html">
+        <a href="Photography.html">
             <img src="pictures/photo_page/Anna1.jpg" alt="">
             <span>Photography</span> 
         </a>
