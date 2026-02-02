@@ -49,7 +49,7 @@ input {
 <!-- STAGE 1 -->
 <div class="stage" id="s1">
   <p>Go to where we kissed for the first time.</p>
-  <p>Upload a selfie:</p>
+  <p>Now upload a selfie</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
 </div>
@@ -57,20 +57,20 @@ input {
 
 <!-- STAGE 2 -->
 <div class="stage" id="s2">
-  <p>How many steps from there to where you said “I love you” for the first time?<br> (this number will be important later)</p>
+  <p>How many steps is it from there to where you said “I love you” for the first time?<br> (this number will be important later)</p>
   <input id="stepsInput" type="number"><br>
   <button onclick="saveSteps()">Submit</button>
 </div>
 
 <!-- STAGE 3 -->
 <div class="stage" id="s3">
-  <p>Go to where we carpooled on our first date.</p>
+  <p>Ready to leave the apartment?<br> Go to where we carpooled on our first date.</p>
   <button onclick="next()">We’re here</button>
 </div>
 
 <!-- STAGE 4 -->
 <div class="stage" id="s4">
-  <p>Take a selfie sitting on your car.</p>
+  <p>Now take a selfie sitting on your car.</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
 </div>
@@ -97,7 +97,7 @@ input {
 <!-- THRIFT -->
 <div class="stage" id="s6">
   <p>Do you remember how many steps you entered?</p>
-  <p id="stepsReveal"></p>
+  <p id="stepsReveal">That's the amount of time</p>
   <p>That's how many minutes you have to pick something weird out for the other person to wear the rest of the day (if you have extra time pick out more than one thing).</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
@@ -105,14 +105,15 @@ input {
 
 <!-- MET FIRST -->
 <div class="stage" id="s7">
-  <p>Take a selfie where we met for the first time.</p>
+  <p>Ready to go for a longer ride? <br>Take a selfie where we met for the first time.</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
 </div>
 
 <!-- GAS STATION -->
 <div class="stage" id="s8">
-  <p>Go to a gas station and grab a random snack experiment.</p>
+  <p>Go to a nearby gas station or Dollar General and grab a random food item you want to experiment with
+</p>
   <button onclick="next()">Done</button>
 </div>
 
@@ -124,21 +125,21 @@ input {
 
 <!-- SWEET TREAT -->
 <div class="stage" id="s10">
-  <p>Make a sweet treat with the snacks. Take a selfie!</p>
+  <p>Make a sweet treat and somehow incorporate the snacks picked. Take a selfie!</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
 </div>
 
 <!-- MUSICAL -->
 <div class="stage" id="s11">
-  <p>Go cheer on brother at the musical 🎭</p>
+  <p>What time is it? Is it time for a musical? Upload a picture!!</p>
   <input type="file" onchange="savePhoto(event)"><br>
   <button onclick="next()">Done</button>
 </div>
 
 <!-- FINAL -->
 <div class="stage" id="s12">
-  <h2>Final clue 💛</h2>
+  <h2>Final clue</h2>
   <p>Now look on your bed… under your bed… on your wall…</p>
   <p><strong>That’s where your gift is.</strong></p>
 
@@ -148,13 +149,25 @@ input {
 
 <script>
 let photos = [];
-let current = 1;
+let current = 0;
 let steps = 0;
+
+function startHunt() {
+  // Hide title page
+  document.getElementById("title").classList.remove("active");
+  // Show first stage
+  show("s1");
+  // Set current stage to 1 so your existing next() logic works
+  current = 1;
+}
+
+
 
 function show(id) {
   document.querySelectorAll('.stage').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
+
 
 function next() {
   current++;
@@ -184,7 +197,7 @@ document.getElementById("picnic").querySelector("button").onclick = afterWeather
 function afterWeather() {
   show("s6");
   document.getElementById("stepsReveal").innerText =
-    `It was ${steps} steps — that’s your timer ⏱️`;
+    `It was ${steps} steps ->`;
 }
 
 function savePhoto(e) {
