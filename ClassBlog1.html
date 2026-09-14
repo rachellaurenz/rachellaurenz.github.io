@@ -4,44 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <!--fonts-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <!--stylesheet-->
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Doodle+Shadow&family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">    
+   <!--stylesheet-->
     <link rel="stylesheet" href="portfolio.css">
     <meta name="Author" content="Rachel Laurenz">
     <title>Class Blog</title>
     <style>
-        .homework{
-            margin-top:100px;
-            margin-bottom: 100px;
-            margin-left:200px;
-            margin-right:200px;
-            padding:100px; 
-            background-color: rgb(150, 123, 123, .6);
-            text-align: center;
-        }
-        h5{
-          font-size: larger;
-          text-decoration: underline;
-          margin-top: 30px;
-          margin-bottom: 10px;
-        }
-        #Blog_photo{
-            justify-content: center;
-        }
+      #moodboard{
+        width: 80%;
+      }
+
+      a:link {
+        color: rgb(94, 122, 167);
+      }
 
     </style>
-  </head>
-  <header>
-    <div id="transparent"></div>
-  
-       <h2>Ideas Homework</h2>
-       <div class="menu">
+</head>
+<header>
+  <div id="transparent"></div>
+
+     <h2>Class Blog</h2>
+     <div class="menu">
      <a class="menu_link" href="index.html">Portfolio</a>
       <a class="menu_link" href="VideoWorks.html">Video Works</a>
       <a class="menu_link" href="Animations.html">Animations</a>
@@ -53,22 +45,76 @@
       <a class="menu_link" href="GIFS.html">GIFS</a>
       <a class="menu_link" href="Exhibition.html">Exhibitions</a>
      </div>
-    </header>
-  <body>
-  <div class="homework">
+  </header>
+<body>
 
-    <h5>Week 1: Visual Systems</h5><br><br> <!--week 5-->
-    <img id="Blog_photo" src="ClassBlog/VisualSystem.png" alt="butterfly made of words">
-   
+<div class="card-container">
+
+
+
+
   
 
+<!--KI Projects-->
+<div class="container">
+    <!-- Button for second video -->
+    <div class="video-card">
+        <a href="#video-popup-8">
+          <div class="card-content">
+            <img src="ClassBlog/VisualSystem.png">
+            <h3>KI Projects</h3>
+            <p>Visual Systems</p>
+          </div>
+        </a>
+      </div>
+    <!-- Popup for second video -->
+    <div id="video-popup-8" class="popup">
+      <a href="#" class="popup-overlay"></a> <!-- Transparent background clickable -->
+        <div class="popup-content">
+        <img id="Blog_photo" src="ClassBlog/VisualSystem.png" alt="butterfly made of words">
+        <p>Visual Systems</p>
+        <p></p>
+    </div>
+    </div>
+</div>
 
 
 
 
+<!--Video Art 2-->
+<div class="container">
+    <!-- Button for second video -->
+    <div class="video-card">
+        <a href="#video-popup-7">
+          <div class="card-content">
+            <img src="ClassBlog/MoodBoard.png">
+            <h3>Video Art 2</h3>
+            <p>Mood Board</p>
+          </div>
+        </a>
+      </div>
+    <!-- Popup for second video -->
+    <div id="video-popup-7" class="popup">
+      <a href="#" class="popup-overlay"></a> <!-- Transparent background clickable -->
+        <div class="popup-content">
+        <img id="moodboard" src="ClassBlog/MoodBoard.png" alt="mood board image">
+        <p>Mood Board</p>
+        <p>
+          So far, I'm looking into different types of natural light that are not the sun, stars, or moon. Lightning bugs, lighning, and bioluminescent algae are my main focuses. Here are the links for the videos in the Mood Board: 
+          <a  class="blog_link" href="https://vimeo.com/1185249250">The Fake Factory "Luminous Flow"</a><br>
+          <a class="blog_link" href="https://vimeo.com/1116174723">Stefano Fake & The Fake Factory "Presence"</a><br>
+          <a class="blog_link" href="https://vimeo.com/148864643">Stefano Fake & The Fake Factory "Infinite Forme Bellissime"</a><br>
+          <a class="blog_link" href="https://vimeo.com/27906418">Experimental Video Art - Jam Session"</a><br>
+          I am drawn to these lighth sources becuase they feel magical. Most people forget there is light <i>in</i> the world and not just in the universe. 
 
+        </p>
+    </div>
+    </div>
+</div>
 
-
-  </body>
-  </div>
-  </html>
+       
+      
+</div>
+</body>
+</div>
+</html>
